@@ -1,0 +1,30 @@
+galaxy_info:
+  origin_author: SmartOps.Academy
+  author: Gábor Zoltán Sinkó
+  description: Configure hosts, hostname, domain name on Debian/Ubuntu
+
+  license: CC-BY-SA
+
+  min_ansible_version: 2.4
+
+  origin_github_branch: https://github.com/SmartOpsAcademy/ansible/roles/hosts
+  github_branch: https:://github.com/sinkog/AnsibleHost.git
+
+
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+    - name: Ubuntu
+      versions:
+        - bionic
+
+  galaxy_tags:
+    - debian
+    - ubuntu
+    - network
+    - hostname
+
+dependencies: []

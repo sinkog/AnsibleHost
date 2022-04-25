@@ -1,0 +1,17 @@
+---
+- name: Set the hostname
+  hostname:
+    name: "{{ hostname }}"
+  become: true
+
+- name: Configure the hosts file
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+    mode: 0644
+  become: true
+
+- name: Set domain name
+  command: "domainname {{ domain_name }}"
+  when: ansible_facts.domain != domain_name
+  become: true
